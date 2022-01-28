@@ -6,20 +6,18 @@ const departmentsRouter = require('./src/routes/departments.routes')
 const mongoClient = require('./src/db/db.client')
 
 app.use('/api/employers', employersRouter)
-app.use('/api/departments_router', departmentsRouter)
+app.use('/api/departments', departmentsRouter)
 
-let dbClient;
 mongoClient.connect(function(err, client) {
     if (err) return console.log(err)
-    dbClient = client;
-    app.listen(port, () => {
-        console.log(`Example app listening on port ${port}`)
-        console.log(`http://localhost:${port}/api/employers/ - to work with employers`)
-        console.log(`http://localhost:${port}/api/departments/ - to work with departments`)
-    })
+
+    // this is used in routes
+    app.departments = client.db("testDB").collection("departments")
+    app.employers = client.db("testDB").collection("employers")
 })
 
-process.on("SIGINT", () => {
-    dbClient.close();
-    process.exit();
-});
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+    console.log(`http://localhost:${port}/api/employers/ - to work with employers`)
+    console.log(`http://localhost:${port}/api/departments/ - to work with departments`)
+})
