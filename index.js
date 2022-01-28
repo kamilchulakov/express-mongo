@@ -1,11 +1,11 @@
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000
-const employers_router = require('./src/routes/employers.routes.js')
-const departments_router = require('./src/routes/departments.routes')
+const employersRouter = require('./src/routes/employers.routes.js')
+const departmentsRouter = require('./src/routes/departments.routes')
 
-app.use('/api/employers', employers_router)
-app.use('/api/departments_router', departments_router)
+app.use('/api/employers', employersRouter)
+app.use('/api/departments_router', departmentsRouter)
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
