@@ -8,6 +8,7 @@ Express.js, MongoDB
 
 ## Запуск
 ```
+npm run start
 ```
 
 ## Функционал
@@ -17,9 +18,18 @@ Express.js, MongoDB
 
 [?] Назначение сотрудников в отдел
 
-[?] Удалять сотрудника из отдела
+[?] Удаление сотрудника из отдела
 
 ## Данные в СУБД
 <img src=".github/data_modelling.png" height="315" width="583" alt="data modelling">
 
 Связь: One-To-Many
+
+## Структура проекта
+```
+    .
+    ├── src
+        ├── routes
+            ├── departments.routes.js
+            └── employers.routes.js
+```
