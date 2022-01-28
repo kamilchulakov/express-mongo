@@ -3,3 +3,6 @@
 
 #misc
 /.idea/
+
+#db
+/mongodb/database
