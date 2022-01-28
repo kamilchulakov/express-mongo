@@ -4,7 +4,7 @@
 REST веб-сервис, построенный на Express.js с использованием MongoDB.
 
 ## Технологии
-Express.js, MongoDB
+Express.js, MongoDB, ESLint
 
 ## Запуск
 ```
