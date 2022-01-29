@@ -1,8 +1,8 @@
 const express = require('express')
+const {getAllEmployers} = require("../controllers/employers.controller");
 const router = express.Router()
 
-router.get('/', (req, res) => {
-    res.send('Not implemented yet!')
-})
+router.route('/')
+    .get(getAllEmployers)
 
 module.exports = router;
