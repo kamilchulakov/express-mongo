@@ -5,7 +5,7 @@ const employersRouter = require('./src/routes/employers.routes')
 const departmentsRouter = require('./src/routes/departments.routes')
 const mongoClient = require('./src/db/db.client')
 
-app.use('/api/employers', employersRouter)
+app.use('/api', employersRouter)
 app.use('/api/departments', departmentsRouter)
 
 mongoClient.connect(function(err, client) {
