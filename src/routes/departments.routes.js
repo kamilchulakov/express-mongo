@@ -1,10 +1,10 @@
 const express = require('express')
 const router = express.Router()
+const departments = require('../models/department')
 
 router.get('/', async (req, res) => {
-    const departments = req.app.departments
     if (departments === undefined) console.log("No departments collection in app!")
-    res.send(await departments.find({}).toArray())
+    res.send(await departments.find({}))
 })
 
 module.exports = router;
