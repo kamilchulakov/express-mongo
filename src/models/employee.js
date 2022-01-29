@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 
-const employer = mongoose.model(
-    "employer",
+const employee = mongoose.model(
+    "employee",
     new mongoose.Schema({
         name: String,
         familyName: String,
@@ -13,4 +13,4 @@ const employer = mongoose.model(
     })
 )
 
-module.exports = employer
+module.exports = employee
