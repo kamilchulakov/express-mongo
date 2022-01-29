@@ -9,7 +9,4 @@ db.createUser({
     ],
 });
 
-db = new Mongo().getDB("testDB");
-
-db.createCollection('departments', { capped: false });
-db.createCollection('employers', { capped: false });
+db = new Mongo().getDB("testDB")
