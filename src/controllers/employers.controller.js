@@ -1,7 +1,6 @@
 const employers = require("../models/employer")
 module.exports.getAllEmployers = async function(req, res) {
     if (employers === undefined) console.log("No employers collection in app!")
-    new employers({name: "Bob"}).save()
     res.send(await employers.find({}))
 }
 
