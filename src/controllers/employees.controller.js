@@ -6,7 +6,8 @@ module.exports.getAllEmployees = async function(req, res) {
 }
 
 module.exports.getAllEmployeesByDepartment = async function(req, res) {
-    res.send(await employee.find({department: req.body.department}))
+    const department = await departments.findOne({name: req.query.department})
+    res.send(await employee.find({department: department}))
 }
 
 module.exports.getEmployeeById = async function(req, res) {
