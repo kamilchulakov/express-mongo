@@ -8,8 +8,8 @@ Express.js, MongoDB, ESLint, Mongoose, Docker
 
 ## Запуск
 ```
-Опционально: docker-compose up -d
-npm run start
+Опционально: docker-compose up -d для развёртывывания MongoDB на нужном порту
+npm run start или npm start
 ```
 
 ## Функционал
