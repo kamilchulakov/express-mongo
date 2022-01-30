@@ -1,8 +1,7 @@
 const express = require('express')
 const {getAllEmployees, getEmployeeById, getAllEmployeesByDepartment, setDepartmentToEmployee, deleteEmployee,
-    updateEmployee, removeDepartmentFromEmployee
+    updateEmployee, removeDepartmentFromEmployee, createEmployee
 } = require("../controllers/employees.controller");
-const {createDepartment} = require("../controllers/departments.controller");
 const router = express.Router()
 
 function routeGetEmployeesByParams(req, res) {
@@ -15,7 +14,7 @@ function routePatchEmployees(req, res) {
 
 router.route('/employees')
     .get(routeGetEmployeesByParams)
-    .post(createDepartment)
+    .post(createEmployee)
     .patch(routePatchEmployees)
     .put(updateEmployee)
     .delete(deleteEmployee)
