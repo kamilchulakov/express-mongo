@@ -16,9 +16,11 @@ npm run start
 
 [?] Добавление/удаление/редактирование сотрудников
 
-[?] Назначение сотрудников в отдел
+[x] Назначение сотрудников в отдел
 
 [?] Удаление сотрудника из отдела
+
+[x] Добавление/удаление/редактирование/получение отделов
 
 ## Данные в СУБД
 <img src=".github/data_modelling.png" height="315" width="583" alt="data modelling">
@@ -28,8 +30,21 @@ npm run start
 ## Структура проекта
 ```
     .
+    ├── index.js
     ├── src
+        ├── db
+        |   ├── connect.js
+        ├── models
+        |   ├── department.js
+        |   └── employee.js
+        ├── controllers
+        |   ├── departments.controller.js
+        |   └── employees.controller.js
         ├── routes
             ├── departments.routes.js
-            └── employers.routes.js
+            └── employees.routes.js
 ```
+
+## Я не знаю, как правильно:
+1) обрабатывать ошибки
+2) делать логи (с декомпозицией в отедльный тред)
