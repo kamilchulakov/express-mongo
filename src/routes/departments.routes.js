@@ -1,9 +1,10 @@
 const express = require('express')
+const {getAllDepartments, createDepartment, updateDepartment} = require("../controllers/departments.controller");
 const router = express.Router()
-const departments = require('../models/department')
 
-router.get('/', async (req, res) => {
-    res.send(await departments.find({}))
-})
+router.route('/departments')
+    .get(getAllDepartments)
+    .post(createDepartment)
+    .patch(updateDepartment)
 
 module.exports = router;

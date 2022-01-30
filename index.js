@@ -6,7 +6,7 @@ const departmentsRouter = require('./src/routes/departments.routes')
 const {connect} = require('./src/db/connect')
 app.use(express.json())
 app.use('/api', employeesRouter)
-app.use('/api/departments', departmentsRouter)
+app.use('/api', departmentsRouter)
 
 connect()
 
