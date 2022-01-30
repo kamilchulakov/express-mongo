@@ -12,3 +12,8 @@ module.exports.updateDepartment = async (req, res) => {
     const newDepartment = await departments.updateOne(req.body)
     res.json(newDepartment)
 }
+
+module.exports.deleteDepartment = async (req, res) => {
+    await departments.deleteOne({ _id: req.body.id})
+    res.send('Delete department')
+}
