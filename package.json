@@ -4,7 +4,7 @@
   "description": "Express+MongoDB",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node index.js | pino-pretty",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint \"**/*.js\" --fix"
   },
@@ -13,7 +13,9 @@
   "dependencies": {
     "express": "^4.17.2",
     "mongodb": "^4.3.1",
-    "mongoose": "^6.1.8"
+    "mongoose": "^6.1.8",
+    "pino-http": "^6.6.0",
+    "pino-pretty": "^7.5.1"
   },
   "devDependencies": {
     "eslint": "^7.32.0",

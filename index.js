@@ -4,7 +4,10 @@ const port = process.env.PORT || 3000
 const employeesRouter = require('./src/routes/employees.routes')
 const departmentsRouter = require('./src/routes/departments.routes')
 const {connect} = require('./src/db/connect')
+const pino = require('pino-http')()
+
 app.use(express.json())
+app.use(pino)
 app.use('/api', employeesRouter)
 app.use('/api', departmentsRouter)
 
