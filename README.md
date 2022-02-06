@@ -46,6 +46,6 @@ npm run start или npm start
             └── employees.routes.js
 ```
 
-## Я не знаю, как правильно:
-1) обрабатывать ошибки
-2) ~~делать логи (с декомпозицией в отдельный тред)~~
+## To-Do:
+1) Nice PATCH
+2) Nice naming (/users everywhere)
